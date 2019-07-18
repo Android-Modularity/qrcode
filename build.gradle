@@ -1,0 +1,16 @@
+apply from: '../scripts/module.gradle'
+
+dependencies {
+    compileOnly deps.appcompat_v7
+    implementation deps.zxing
+}
+
+apply plugin: 'bintray-release'
+publish {
+    userOrg = 'zfy'
+    groupId = 'com.zfy'
+    artifactId = 'qrcode'
+    publishVersion = '0.0.2'
+    desc = 'qrcode'
+    website = 'https://github.com/Android-Modularity/qrcodede'
+}
